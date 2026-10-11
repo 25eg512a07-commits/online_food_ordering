@@ -1,7 +1,5 @@
-// Backend URL (Spring Boot).
-// Local dev  -> http://localhost:8080 (default)
-// Production -> set VITE_API_URL in .env.production before "npm run build"
-export const API_BASE = (import.meta.env.VITE_API_URL || "http://localhost:8081").replace(/\/+$/, "");
+// Backend URL (Spring Boot). Override with VITE_API_URL for local development.
+export const API_BASE = (import.meta.env.VITE_API_URL || "https://online-food-ordering-glpd.onrender.com").replace(/\/+$/, "");
 
 // ---------- shared helpers used by every page ----------
 export const getToken = () => localStorage.getItem("token");
